@@ -15,7 +15,7 @@ class RegistrationsController < ApplicationController
     end
 
     private
-    def user_params
+    def user_params #object has 3 fields, has permition
         params.require(:user).permit(:email, :password, :password_confirmation)
     end
 end

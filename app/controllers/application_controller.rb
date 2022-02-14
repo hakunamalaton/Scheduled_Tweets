@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
         if session[:user_id]
             Current.user = User.find_by(id: session[:user_id]) # do not throw error when not find
         end
+        #p "Current user is #{Current.user}"
     end
 
     def require_user_logged_in!

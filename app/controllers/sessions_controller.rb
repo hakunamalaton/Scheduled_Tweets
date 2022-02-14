@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
     def new
-        @user = User.new
+        #@user = User.new
     end
 
     def create
@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
             flash[:alert] = "Invalid email or password"
             render :new
         end
-
     end
 
     def destroy
